@@ -1,20 +1,23 @@
-
 import React from "react"
 import ReactDom from "react-dom/client"
-const Title=()=>(
-   <h1 className="Head">Hey There Am Title</h1>
-)
-  
-let c="Javascript running Heh Error lol JSX"
 
-const Heading2=()=>(
-  <div id="container">
-    <Title/>
-    <Title></Title>
-    {Title()}
-    <h1 className="heading">This is functional component</h1>
+const Navbar=()=>{
+  return <div className="navbar">
+    <h1 >
+      Logo
+    </h1>
+    <ul className="menu-item">
+      <li>MEN</li>
+      <li>WOMEN</li>
+      <li>KIDS</li>
+    </ul>
   </div>
-);
+}
+const App=()=>{
+  return <div>
+    {<Navbar/>}
+   
+  </div>
+}
 const root=ReactDom.createRoot(document.getElementById("root"))
-root.render(<Heading2/>)
-
+root.render(<App/>)
