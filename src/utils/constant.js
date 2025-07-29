@@ -1,7 +1,4 @@
-import React from "react"
-import ReactDom from "react-dom/client"
-
-const Productlist=[
+export const Productlist=[
   {
     "id": 1,
     "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -243,44 +240,3 @@ const Productlist=[
     }
   }
 ]
-
-const Navbar=()=>{
-  return <div className="navbar">
-    <h1 >
-      Logo
-    </h1>
-    <ul className="menu-item">
-      <li>MEN</li>
-      <li>WOMEN</li>
-      <li>KIDS</li>
-      <li>CART</li>
-    </ul>
-  </div>
-}
-const App=()=>{
-  return <div>
-    <Navbar/>
-    <Productcard/>
-   
-  </div>
-}
-const Product=(props)=>{
-  const {title,rating,price,image}=props.itsMyChoice;
-  return <div className="product">
-   <img className="product-img" src={image}/>
-   <h1>{title}</h1>
-   <p>{rating.rate}</p>
-   <p>{price}</p>
-  </div>
-}
-const Productcard=()=>{
-  return <div className="product-card">
- {
- Productlist.map((itsMyChoice, id) => {
-  return <Product key={id} itsMyChoice={itsMyChoice} />;
-})}
-
-  </div>
-}
-const root=ReactDom.createRoot(document.getElementById("root"))
-root.render(<App/>)
