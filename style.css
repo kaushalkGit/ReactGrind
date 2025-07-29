@@ -10,3 +10,19 @@
     padding: 10px;
     list-style-type: none;
 }
+.product-card{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.product{
+    width:205px;
+    padding:10px;
+    border:1px solid black;
+    text-align: center;
+    margin: 5px;
+}
+.product >.product-img{
+    width: 205px;
+}
